@@ -1,16 +1,20 @@
-// Get the form element and add an event listener for the submit event
-const form = document.querySelector('.QuestionInputForm');
+// Get the value of the input form
+const question = document.getElementById('question').value;
 
-form.addEventListener('submit', (event) => {
-    // Prevent the default form submission behavior
-    event.preventDefault();
-    
-    // Get the value of the text input
-    const questionInput = document.querySelector('.QuestionInput');
-    const question = questionInput.value;
-    // Send the value of the text input to a Python script
-    const xhr = new XMLHttpRequest();
-    xhr.open('POST', 'clientInput.py', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send('question=' + encodeURIComponent(question));
+// Send a POST request to the server with the question data
+fetch('/newmessage/' + question, {
+  method: 'GET'
+})
+.then(response => {
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  // Do something with the response
+    return response.json();
+
+})
+.catch(error => {
+  console.error('There was a problem with the fetch operation:', error);
+  
 });
+
