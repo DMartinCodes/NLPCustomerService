@@ -9,8 +9,11 @@ class DataBase:
     def __init__(self):
         pass
 
-    def add_message(self, message: object):
-        self.messages.append(message)
+    def add_message(self, message: str):
+
+        new_message = MessageData(message)
+
+        self.messages.append(new_message)
 
     def get_division(self, division: int) -> list:
 
@@ -46,9 +49,19 @@ class MessageData:
         pass
 
 
-@app.route('/')
-def hello_world():  # put application's code here
-    return 'Hello World!'
+database = DataBase()
+
+
+@app.route('/newmessage/<message>', methods=['GET'])
+def add_new_message(message):  # put application's code here
+    database.add_message(message)
+    return 'Ok'
+
+
+@app.route('/getdivmessage/<div>', methods=['GET'])
+def get_div_message(div: int):  # put application's code here
+    messages = database.get_division(div)
+    return messages
 
 
 if __name__ == '__main__':
