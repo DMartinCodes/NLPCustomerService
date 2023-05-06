@@ -1,32 +1,47 @@
-<<!--This page is the generic "homepage" for clients, where they will input a customer service ticket-->
+<!--This page is the generic "homepage" for clients, where they will input a customer service ticket-->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Client Homepage</title>
-    <link rel="stylesheet" href="clientInput.css">
+    <link rel="stylesheet" href="inputStyle.css">
+
+    <!--Importing the necessary fonts-->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
+
+    
 </head>
 
 <body>
     <h1 class="Title">Client Homepage</h1>
     <h2 class="SubTitle">Welcome, Client!</h2>
 
-    <div class="Input">
-        <!--This is the form that the client will use to input a customer service ticket-->
-        <h3 class="QuestionHeader">What's your question?</h3>
-        
-        <form class="QuestionInputForm" action = "clientInput.php" method = "post">
-            <label for="question">Question:</label>
-            <textarea class="QuestionInput" name="question" id="question" cols="30" rows="10"></textarea>
-            <input class="SubmitButton" type="submit" value="Submit">
-        </form>
+    <!--This is the container which organizes the three elements-->
+    <div class="Wrapper">
 
-        <!--This is the button that the client will use to view their previous tickets-->
-        <form action = "clientView.php" method = "post">
-            <input type="submit" value="View Previous Tickets">
-        </form>
+
+        <div class="Input">
+            <!--This is the form that the client will use to input a customer service ticket-->
+            <h3 class="QuestionHeader">What's your question?</h3>
+            
+            <form class="QuestionInputForm" action = "clientInput.php" method = "post">
+                <label for="question">Question:</label>
+                <textarea class="QuestionInput" name="question" id="question" cols="30" rows="10"></textarea>
+                <input class="SubmitButton" type="submit" value="Submit">
+            </form>
+    
+            <!--This is the button that the client will use to view their previous tickets-->
+            <form action = "clientView.php" method = "post">
+                <input type="submit" value="View Previous Tickets">
+            </form>
+        </div>
+
     </div>
+
+    
 
     
 
@@ -34,32 +49,14 @@
     <div class="Footer">
         <!--Container for the five images of people who worked on their projects, where each image is a github link-->
         <div class="Images">
-            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
-            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
-            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
-            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
-            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture" width="50px" height="50px"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture" width="50px" height="50px"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture" width="50px" height="50px"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture" width="50px" height="50px"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture" width="50px" height="50px"></a>
         </div>
 
 
-        <h4>Made by the IPear team!</h4>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <h4>Made by the RapidResponse team!</h4>
 
 </html>
