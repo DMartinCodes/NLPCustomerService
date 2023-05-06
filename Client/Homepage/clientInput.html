@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <title>Client Homepage</title>
     <link rel="stylesheet" href="inputStyle.css">
+    <script type="text/javascript" src="inputScript.js"></script>
 
     <!--Importing the necessary fonts-->
     <style>
@@ -16,8 +17,6 @@
 </head>
 
 <body>
-    <h1 class="Title">Client Homepage</h1>
-    <h2 class="SubTitle">Welcome, Client!</h2>
 
     <!--This is the container which organizes the three elements-->
     <div class="Wrapper">
@@ -25,18 +24,15 @@
 
         <div class="Input">
             <!--This is the form that the client will use to input a customer service ticket-->
-            <h3 class="QuestionHeader">What's your question?</h3>
+            <h3 class="QuestionHeader">How can I help you?</h3>
             
-            <form class="QuestionInputForm" action = "clientInput.php" method = "post">
+            <form class="QuestionInputForm" action="server/clientInput.py" method="post">
                 <label for="question">Question:</label>
                 <textarea class="QuestionInput" name="question" id="question" cols="30" rows="10"></textarea>
                 <input class="SubmitButton" type="submit" value="Submit">
             </form>
-    
-            <!--This is the button that the client will use to view their previous tickets-->
-            <form action = "clientView.php" method = "post">
-                <input type="submit" value="View Previous Tickets">
-            </form>
+            
+            
         </div>
 
     </div>
