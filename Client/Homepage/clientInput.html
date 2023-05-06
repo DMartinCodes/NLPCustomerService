@@ -9,57 +9,57 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Client Homepage</h1>
+    <h1 class="Title">Client Homepage</h1>
+    <h2 class="SubTitle">Welcome, Client!</h2>
+
+    <div class="Input">
+        <!--This is the form that the client will use to input a customer service ticket-->
+        <h3 class="QuestionHeader">What's your question?</h3>
+        
+        <form class="QuestionInputForm" action = "clientInput.php" method = "post">
+            <label for="question">Question:</label>
+            <textarea class="QuestionInput" name="question" id="question" cols="30" rows="10"></textarea>
+            <input class="SubmitButton" type="submit" value="Submit">
+        </form>
+
+        <!--This is the button that the client will use to view their previous tickets-->
+        <form action = "clientView.php" method = "post">
+            <input type="submit" value="View Previous Tickets">
+        </form>
+    </div>
+
+    
+
+
+    <div class="Footer">
+        <!--Container for the five images of people who worked on their projects, where each image is a github link-->
+        <div class="Images">
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
+            <a href=""><img src="https://avatars.githubusercontent.com/u/81913992?v=4" alt="Github Profile Picture" class="ProfilePicture"></a>
         </div>
-        <div class="content">
-            <form action="clientInput.php" method="post">
-                <div class="input">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" required>
-                </div>
-                <div class="input">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="input">
-                    <label for="phone">Phone Number:</label>
-                    <input type="tel" name="phone" id="phone" required>
-                </div>
-                <div class="input">
-                    <label for="issue">Issue:</label>
-                    <textarea name="issue" id="issue" cols="30" rows="10" required></textarea>
-                </div>
-                <div class="input">
-                    <label for="priority">Priority:</label>
-                    <select name="priority" id="priority" required>
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High</option>
-                        <option value="critical">Critical</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="department">Department:</label>
-                    <select name="department" id="department" required>
-                        <option value="sales">Sales</option>
-                        <option value="support">Support</option>
-                        <option value="billing">Billing</option>
-                        <option value="technical">Technical</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="status">Status:</label>
-                    <select name="status" id="status" required>
-                        <option value="open">Open</option>
-                        <option value="closed">Closed</option>
-                    </select>
-                </div>
-                <div class="input">
-                    <label for="date">Date:</label>
-                    <input type="date" name="date" id="date" required>
-                </div>
-                <div class="input">
-                    <label for="time">Time:</label>
+
+
+        <h4>Made by the IPear team!</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </html>
