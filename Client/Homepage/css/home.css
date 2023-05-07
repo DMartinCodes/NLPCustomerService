@@ -106,21 +106,12 @@ nav ul li a:hover::after {
     }
 }
 
-.search {
-    position: fixed;
-    right: 160px;
-}
-
-.menu {
-    position: fixed;
-    right: 100px;
-}
 
 .img img {
     position: relative;
-    width: 700px;
+    width: 500px;
     left: 8.5%;
-    bottom: -20px;
+    bottom: -5px;
 }
 
 .title {
@@ -129,7 +120,7 @@ nav ul li a:hover::after {
     top: 376px;
     left: 43%;
     line-height: .5;
-    font-size: 150px;
+    font-size: 100px;
     font-weight: 700;
     letter-spacing: -6px;
 }
