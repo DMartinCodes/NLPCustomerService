@@ -21,6 +21,59 @@ h4 {
     font-family: 'Amiri', serif;
 }
 
+nav {
+    z-index: 2;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px 0;
+}
+
+nav ul {
+    flex: 1;
+    text-align: right;
+    padding-right: 270px;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 10px 30px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+nav ul li a::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ff3131;
+    transition: width 0.4s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    position: fixed;
+    left: 120px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
 
 
 /* Style for the form container */
